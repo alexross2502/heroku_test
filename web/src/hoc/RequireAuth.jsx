@@ -9,7 +9,12 @@ const RequireAuth = ({ children }) => {
 
   if (!isAuthorized) {
     dispatch(setModalActive());
-    return <Navigate to="/" state={{ from: location }} />;
+    return (
+      <Navigate
+        to="https://intership-alex.herokuapp.com/"
+        state={{ from: location }}
+      />
+    );
   }
 
   return children;

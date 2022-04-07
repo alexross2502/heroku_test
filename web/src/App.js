@@ -13,9 +13,12 @@ function App() {
       <div className="App">
         <Router>
           <Routes>
-            <Route path="/" element={<MainPage />} />
             <Route
-              path="/clients"
+              path="https://intership-alex.herokuapp.com/"
+              element={<MainPage />}
+            />
+            <Route
+              path="https://intership-alex.herokuapp.com/clients"
               element={
                 <RequireAuth>
                   <ClientPage />
@@ -23,7 +26,7 @@ function App() {
               }
             />
             <Route
-              path="/masters"
+              path="https://intership-alex.herokuapp.com/masters"
               element={
                 <RequireAuth>
                   <MastersPage />
@@ -31,7 +34,7 @@ function App() {
               }
             />
             <Route
-              path="/towns"
+              path="https://intership-alex.herokuapp.com/towns"
               element={
                 <RequireAuth>
                   <TownsPage />

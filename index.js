@@ -10,11 +10,11 @@ const errorHandler = require("./middleware/ErrorHandlingMiddleware");
 
 app.use(cors());
 app.use(express.json());
-app.use("/api", router);
+app.use("https://intership-alex.herokuapp.com/api", router);
 //обработка ошибок, последний middleware
 app.use(errorHandler);
 
-app.get("/", (req, res) => {
+app.get("https://intership-alex.herokuapp.com/", (req, res) => {
   res.render("web/src/index");
 });
 
