@@ -1,7 +1,7 @@
 const config = require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-//const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 const app = express();
 const sequelize = require("./db");
 const models = require("./models/models");
@@ -15,7 +15,7 @@ app.use("/api", router);
 app.use(errorHandler);
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "working" });
+  res.render("web/src/index");
 });
 
 const start = async () => {
