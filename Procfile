@@ -1,1 +1,1 @@
-"heroku-postbuild" : "npm run build"
+web: node index.js
