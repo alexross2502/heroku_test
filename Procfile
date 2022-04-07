@@ -1,1 +1,1 @@
-"heroku-postbuild": "npm run build"
+"heroku-postbuild" : "npm run build"
